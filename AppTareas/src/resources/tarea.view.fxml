@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" alignment="TOP_CENTER" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="app.controller.TareaController" stylesheets="@style.css" style="-fx-padding: 30;">
+
+    
+    <Label text="Organiza tus Tareas" styleClass="title"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <TextField fx:id="tituloField" promptText="Título" HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="descripcionField" promptText="Descripción" HBox.hgrow="ALWAYS"/>
+        <Button text="Agregar" onAction="#addTarea"/>
+    </HBox>
+
+    <ListView fx:id="tareasListView" prefHeight="200" maxWidth="360"/>
+
+    <HBox spacing="15" alignment="CENTER">
+        <Button text="Finalizar" onAction="#finalizarTarea"/>
+        <Button text="Editar" onAction="#handleEditTask"/>
+        <Button id="btn-eliminar" text="Eliminar" onAction="#handleDeleteTask"/>
+    </HBox>
+</VBox>
